@@ -1,0 +1,28 @@
+SOLUCIÓN A LOS PROBLEMAS PROPUESTOS
+
+1. Validando Códigos
+
+- El script se llama pedregal.py
+- Para ejecutar este script solo basta con ir a un terminal, ubicarse en la ruta correspondiente y ejecutar el comando python pedregal.py
+- Dentro del script debemos cambiar el usuario y password del servidor MySQL a conectarnos.
+
+- Este script crea la base de datos 'python_pedregal', crea la tabla 'cajas_producidas', lee y valida los
+registros del archivo cajas.txt para depues insertarlos como registros en la tabla 'cajas_producidas'
+- He utilizado el modulo MySQLdb para conectarnos con el servidor MYSQL-
+- Segun la distribucion de linux a utilizar se debe instalar el modulo MySQLdb, en mi caso
+  he usado ubuntu y basta con ejecutar en un terminal el comando apt-get install python-mysqldb
+
+2. Proyecto Django.
+
+- Utilizo Django 1.3,ultima version
+- Tenemos el proyecto creado "prodmanage" con una aplicación 'produccion'.
+- Tenemos el modelo cajas_producidas que se mapea con la tabla antes creada 'cajas_producidas' (atributo db_table)
+- Activamos el admin en Django para poder ingresar al sitio de administracion.
+- Podemos ejecutar el servidor de desarrollo en django para visualizar la aplicacion.
+- Mostramos la pagina web con un listado de especie, variedad, procedencia, año produccion, numero cajas, para ello
+tenemos que ingresar al sitio de administracion en la aplicacion 'cajas producidas'
+- Ejecutamos el dump de la base de datos con el comando python manage.py dumpdata --indent = 4 > pedregal.json
+- El formato se encuentra en json.
+- Con el comando loaddata podemos colver a cargar la base de datos a partir del archivo .json.
+
+ING. MIGUEL ANGEL VELEZ OLIVA
